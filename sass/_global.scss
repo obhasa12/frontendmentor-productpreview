@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+a,.a{
+    text-decoration: none;
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: v.$Cream;
+    font-family: v.$montserrat;
+    color: v.$Darkgrayishblue;
+}
+
+.container{
+    margin: auto;
+    @include m.breakpoint-up(large){
+        margin: 8.5rem;
+    }
+}
